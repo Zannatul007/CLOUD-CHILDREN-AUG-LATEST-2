@@ -36,6 +36,7 @@ $k = -1;
     <!--Customize css link-->
     <link rel="stylesheet" href="../css/booking.css">
     <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
 
     <!--Swiper cdn-->
@@ -66,13 +67,14 @@ $k = -1;
                     <a href="#"> Cloud
                         Children </a>
                 </div>
+                <div class="ms-auto p-1 user-name-top h4 text-success border border-2 border-success rounded">
+                    <?php echo $userlogged ?>
+                </div>
                 <li class="user-drop nav-item dropdown ">
                     <a class="link nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user" id="login-btn"></i>
                     </a>
-                    <div class="ms-auto p-1 user-name-top h4 text-success border border-2 border-success rounded">
-                        <?php echo $userlogged ?>
-                    </div>
+
                     <ul class="dropdown-menu" aria-labelledby="user-dropdown">
 
                         <li><a class="dropdown-item" href="../day-care-regi-login/daycare_edit_profile.php"><i class="fa-solid fa-user"></i> My Profile</a></li>
@@ -119,10 +121,11 @@ $k = -1;
                         <?php
 
                         } ?>
+                        <li><a href="../daycare_categorywise/daycare_categorywise.php" class="nav-link">Available daycares</a></li>
                         <!-- <li><a href="#about" class="nav-link">About Us</a></li>
                         <li><a href="#services" class="nav-link">Services</a></li> -->
 
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="link nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Child-Care Categories
                             </a>
@@ -146,7 +149,7 @@ $k = -1;
                                 </li>
                                 <li><a class="dropdown-item" href="#">Foreigner-Child</a></li>
                             </ul>
-                        </li>
+                        </li> -->
 
 
                         <li><a href="../parenting_blogs/blogs_home.html" class="nav-link">Parenting-Guides</a></li>
@@ -182,7 +185,7 @@ $k = -1;
                     $booking_id[$k] = $row_prev['booking_id'];
                 ?>
 
-                    <div class="row g-4 ms-auto me-auto book-state-detail ">
+                    <div class="row g-4 ms-auto me-auto book-state-detail mb-5 ">
 
                         <div class="col-lg-6 col-6 booking-detail"> <span class="h3 id">Booking Id</span> <span class="info"><?php echo $row_prev['booking_id'] ?></span></div>
                         <?php
@@ -203,7 +206,8 @@ $k = -1;
                         ?>
                         <!-- <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> -->
                         <div class="col-lg-2 col-2"><button class=" deny-details" type="submit" name="<?php echo $o; ?>">Deny</button></div>
-
+                        <br>
+                        <br>
                     </div>
 
                 <?php

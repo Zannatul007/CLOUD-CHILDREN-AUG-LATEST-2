@@ -91,22 +91,23 @@ $k = -1;
 
                     </ul>
                 </li> -->
+                <div class="ms-auto p-1 user-name-top h4 text-success border border-2 border-success rounded">
+                    <?php echo $userlogged ?>
+                </div>
                 <li class="user-drop nav-item dropdown ">
                     <a class="link nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user" id="login-btn"></i>
                     </a>
-                    <div class="ms-auto p-1 user-name-top h4 text-success border border-2 border-success rounded">
-                        <?php echo $userlogged ?>
-                    </div>
+
                     <ul class="dropdown-menu" aria-labelledby="user-dropdown">
 
                         <li><a class="dropdown-item" href="../day-care-regi-login/daycare_edit_profile.php"><i class="fa-solid fa-user"></i> My Profile</a></li>
                         <hr>
                         <li><a class="dropdown-item" href="../day-care-regi-login/daycare-edit.php"><i class="fa-solid fa-tags"></i> Edit Profile</a></li>
                         <hr>
-                        <li><a class="dropdown-item" href="./booking_checklist_daycare_pending.php"><i class="fa-solid fa-tags"></i>Pending Booking</a></li>
+                        <li><a class="dropdown-item" href="./booking_checklist_daycare_pending.php"><i class="fa-solid fa-tags"></i> Pending Booking</a></li>
                         <hr>
-                        <li><a class="dropdown-item" href="./confirm.php"><i class="fa-solid fa-tags"></i>Confirmed Booking</a></li>
+                        <li><a class="dropdown-item" href="./confirm.php"><i class="fa-solid fa-tags"></i> Confirmed Booking</a></li>
                         <hr>
                         <li><a class="dropdown-item" href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sign
                                 out</a></li>
@@ -146,7 +147,7 @@ $k = -1;
                         } ?>
                         <!-- <li><a href="#about" class="nav-link">About Us</a></li>
                         <li><a href="#services" class="nav-link">Services</a></li> -->
-
+                        <li><a href="../daycare_categorywise/daycare_categorywise.php" class="nav-link">Available Daycares</a></li>
                         <!-- <li class="nav-item dropdown">
                             <a class="link nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Child-Care Categories

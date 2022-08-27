@@ -22,49 +22,93 @@ if ($people != "") {
 ?>
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap Link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../customize-styles/home.css">
-    <link rel="stylesheet" href="../customize-styles/regi-form.css">
+
+    <!--Customize css link-->
+    <link rel="stylesheet" href="../css/style_new.css">
+    <link rel="stylesheet" href="../css/form.css">
     <link rel="stylesheet" href="../css/footer.css">
+
+
+    <!--Swiper cdn-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/swiper.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--comapny logo font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://kit.fontawesome.com/bc867c7232.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Booking Details</title>
+    <title>Day Care Registration</title>
 </head>
+
 
 <body>
     <!-- navigation bar -->
-    <div class="container mb-5">
-        <nav class="navbar fixed-top navbar-expand-lg">
+    <header class="header header-in container-fluid">
 
-            <a class="link navbar-brand" href="#">Children-cloud</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="header-1">
+            <div id="company-logo"><img src="../images/company-logo-removebg-preview.png" alt="">
+                <a href="#"> Cloud
+                    Children </a>
+            </div>
+            <div class="ms-auto p-1 user-name-top h4 text-success border border-2 border-success rounded">
+                <?php echo $userlogged ?>
+            </div>
+            <li class="user-drop nav-item dropdown ">
+                <a class="link nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user" id="login-btn"></i>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="user-dropdown">
+
+                    <li><a class="dropdown-item" href="../day-care-regi-login/daycare_edit_profile.php"><i class="fa-solid fa-user"></i> My Profile</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="../day-care-regi-login/daycare-edit.php"><i class="fa-solid fa-tags"></i> Edit Profile</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="./booking_checklist_daycare_pending.php"><i class="fa-solid fa-tags"></i> Pending Booking</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="./confirm.php"><i class="fa-solid fa-tags"></i> Confirmed Booking</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sign
+                            out</a></li>
+
+
+                </ul>
+            </li>
+        </div>
+
+        <!--navigation Bar-->
+
+        <nav class="header-2 navigation-bar navbar navbar-expand-lg">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="link nav-link active" aria-current="page" href="../index.html">Home</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto  ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li><a href="../index_user.php" class="nav-link">Home</a></li>
 
-                    <!-- <li class="nav-item">
-                        <a class="link nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="link nav-link" href="#services">Services</a>
-                    </li> -->
-                    <li class="nav-item dropdown">
-                        <a class="link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li><a href="../daycare_categorywise/daycare_categorywise.php" class="nav-link">Available Daycares</a></li>
+
+
+
+                    <!-- <li class="nav-item dropdown">
+                        <a class="link nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Child-Care Categories
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu" id="dropmenu" aria-labelledby="navbarDropdown">
 
                             <li><a class="dropdown-item" href="#">Toddler</a></li>
                             <li>
@@ -84,28 +128,20 @@ if ($people != "") {
                             </li>
                             <li><a class="dropdown-item" href="#">Foreigner-Child</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="link nav-link" href="">Parenting-Guide</a>
-                    </li>
+                    </li> -->
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="user-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-circle-user"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="user-dropdown">
-                            <li><a class="dropdown-item" href="../login-page.html">Log In</a></li>
-                            <hr>
-                            <li><a class="dropdown-item" href="../register-page.html">Register</a></li>
-                        </ul>
-                    </li>
+
+                    <li><a href="../parenting_blogs/blogs_home.html" target="_blank" class="nav-link">Parenting-Guides</a></li>
                 </ul>
 
             </div>
-    </div>
+
+        </nav>
+
+    </header>
     <!-- Ending navigation bar -->
     <br>
-    <div class="outer-box container mt-5 mb-5">
+    <div class="form-sec outer-box container mb-5">
         <div class="row d-flex align-items-center">
             <div class=" col-lg-6 p-3">
                 <!-- <img id="form-img" src="images/form/form-todd.jpg" alt=""> -->
@@ -482,8 +518,11 @@ if ($people != "") {
             </form>
         </div>
 
+
     </div>
-    <footer class="footer-basic ">
+    <br>
+    <br><br>
+    <footer class="footer-basic pt-5 mt-5 ">
         <div class="row d-flex">
             <div class="col-2 company-name">Children Cloud</div>
             <div class="col-1">
