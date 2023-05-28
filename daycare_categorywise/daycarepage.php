@@ -27,7 +27,7 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--comapny logo font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,9 +87,28 @@ session_start();
                 <a href="#"> Cloud
                     Children </a>
             </div>
-            <div class="icons">
-                <div id="login-btn" class="fas fa-user"></div>
+            <div class="ms-auto p-1 user-name-top h4 text-success border border-2 border-success rounded">
+                <?php echo $userlogged ?>
             </div>
+            <li class="user-drop nav-item dropdown ">
+                <a class="link nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user" id="login-btn"></i>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="user-dropdown">
+
+                    <li><a class="dropdown-item" href="../user-regi-login/user_edit_profile.php"><i class="fa-solid fa-user"></i> My Profile</a></li>
+                    <hr>
+                    <!-- <li><a class="dropdown-item" href="user-regi-login/user-edit.php"><i class="fa-solid fa-tags"></i> Edit Profile</a></li>
+                    <hr> -->
+                    <li><a class="dropdown-item" href="../booking/bookig_checklist_user.php"><i class="fa-solid fa-tags"></i> My booking</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sign
+                            out</a></li>
+
+
+                </ul>
+            </li>
         </div>
 
         <!--navigation Bar-->
@@ -101,11 +120,11 @@ session_start();
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto  ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About Us</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="../index_user.php" class="nav-link">Home</a></li>
+                    <li><a href="../daycare_categorywise/daycare_categorywise.php" class="nav-link">Available Categories</a></li>
 
-                    <li class="nav-item dropdown">
+
+                    <!-- <li class="nav-item dropdown">
                         <a class="link nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Child-Care Categories
                         </a>
@@ -129,10 +148,10 @@ session_start();
                             </li>
                             <li><a class="dropdown-item" href="#">Foreigner-Child</a></li>
                         </ul>
-                    </li>
+                    </li> -->
 
 
-                    <li><a href="#parenting-blogs" class="nav-link">Parenting-Guides</a></li>
+                    <li><a href="../parenting_blogs/blogs_home.html" class="nav-link">Parenting-Guides</a></li>
                 </ul>
 
             </div>

@@ -8,11 +8,11 @@ session_start();
 $daycare = $people = $userlogged = "";
 if (isset($_SESSION["daycare-name"])) {
     $daycare = $_SESSION['daycare-name'];
-    $_SESSION['day_care']=TRUE;
+    $_SESSION['day_care'] = TRUE;
 }
 if (isset($_SESSION["user-name"])) {
     $people = $_SESSION['user-name'];
-    $_SESSION['user']=TRUE;
+    $_SESSION['user'] = TRUE;
 }
 
 if ($daycare != "") {
@@ -67,16 +67,17 @@ $files = scandir($path);
                     <a href="#"> Cloud
                         Children </a>
                 </div>
+                <div class="ms-auto p-1 user-name-top h4 text-success border border-2 border-success rounded">
+                    <?php echo $userlogged ?>
+                </div>
                 <li class="user-drop nav-item dropdown ">
                     <a class="link nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user" id="login-btn"></i>
                     </a>
-                    <div class="ms-auto p-1 user-name-top h4 text-success border border-2 border-success rounded">
-                        <?php echo $userlogged ?>
-                    </div>
+
                     <ul class="dropdown-menu" aria-labelledby="user-dropdown">
 
-                    <li><a class="dropdown-item" href="user-regi-login/user_edit_profile.php"><i class="fa-solid fa-user"></i> My Profile</a></li>
+                        <li><a class="dropdown-item" href="user-regi-login/user_edit_profile.php"><i class="fa-solid fa-user"></i> My Profile</a></li>
                         <hr>
                         <li><a class="dropdown-item" href="user-regi-login/user-edit.php"><i class="fa-solid fa-tags"></i> Edit Profile</a></li>
                         <hr>

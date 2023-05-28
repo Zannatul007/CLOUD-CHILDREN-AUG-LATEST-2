@@ -185,7 +185,7 @@ $k = -1;
                     $booking_id[$k] = $row_prev['booking_id'];
                 ?>
 
-                    <div class="row g-4 ms-auto me-auto book-state-detail mb-5 ">
+                    <div class="row g-4 ms-auto me-auto mb-5 book-state-detail mb-5 ">
 
                         <div class="col-lg-6 col-6 booking-detail"> <span class="h3 id">Booking Id</span> <span class="info"><?php echo $row_prev['booking_id'] ?></span></div>
                         <?php

@@ -461,7 +461,7 @@ session_start();
                         <a class="footer-link" href="parenting_blogs/blogs_home.html">Parenting Blog</a>
                     </li>
                     <li>
-                        <a href="daycare_categorywise\daycare_categorywise.php" class="footer-link">Day Care
+                        <a href="../daycare_categorywise/daycare_categorywise.php" class="footer-link">Day Care
                             Categories</a>
                     </li>
 
